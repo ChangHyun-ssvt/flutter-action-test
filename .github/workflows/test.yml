@@ -22,10 +22,10 @@ jobs:
       - name: Get pub packages
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
       - run: flutter pub get
       - run: flutter analyze
-      
+
       - name: Ensure the Dart code is formatted correctly
         run: flutter format --set-exit-if-changed --dry-run .
         
